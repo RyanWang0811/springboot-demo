@@ -1,4 +1,4 @@
-name: Build trek-clotho
+name: github-action
 on: [push]
 jobs:
   build:
@@ -22,6 +22,9 @@ jobs:
           restore-keys: ${{ runner.os }}-m2
       # build project
       - name: Build And Push To Github Package
-        run:  mvn compile jib:build
+        run: >
+          mvn compile jib:build
+          -Djib.to.auth.username=${{ github.actor }}
+          -Djib.to.auth.password=${{ secrets.GITHUB_TOKEN }}
 
 
