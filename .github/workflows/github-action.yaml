@@ -43,6 +43,7 @@ jobs:
           context: .
           push: true
           file: Dockerfile
+          tags: ghcr.io/r41318/demo:0.0.1-SNAPSHOT
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
 
