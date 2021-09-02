@@ -50,7 +50,7 @@
                 <version>3.1.4</version>
                 <configuration>
                     <from>
-                        <image>mcr.microsoft.com/java/jdk:11-zulu-alpine</image>
+                        <image>gcr.io/distroless/java:11</image>
                     </from>
                     <to>
                         <image>ghcr.io/demo</image>
